@@ -1,0 +1,23 @@
+.NavBar{
+    position: fixed;
+    top:0;
+    width:100%;
+    height: 70px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #111;
+
+
+}
+.Logo{
+    position: fixed;
+    left: 50px;
+    width: 150px;
+}
+
+.Avtar{
+    position: fixed;
+    right: 20px;
+    width: 40px;
+}

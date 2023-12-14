@@ -5,18 +5,19 @@ import './App.css'
 import NavBar from './componets/NavBar'
 import Home from './Pages/Home'
 
-import {Route , Routes} from 'react-router-dom';
+
+
+import { Route, Routes } from 'react-router-dom';
+
 function App() {
-
-
   return (
     <>
-     <NavBar/>
-     <Routes>
-      <Route path='/' elmenet={<Home/>}></Route>
-     </Routes>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -3,7 +3,7 @@ import Request from '../Request';
 import axios from 'axios';
 
 const Main = () => {
-  const key = process.env.REACT_APP_API_KEY;
+  const key = '961ef83b0bf98b51b6d7b6c6b885d384';
   
   const requests = {
     requestPopular: `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`,
@@ -17,7 +17,12 @@ const Main = () => {
   const handleToggle = () => {
     setIsExpanded(!isExpanded);
   };
-
+  // const preventRerender=async(e)=>{
+  //   e.preventDefault()
+  // }
+  const handleCloseClick = () => {
+    setShowTrailer(false);
+  };
   const handlePlayClick = () => {
     
     axios.get(`https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${key}`)
@@ -65,9 +70,10 @@ const Main = () => {
         <div className='absolute w-full top-[20%] p-4 md:p-8'>
           <h1 className='text-3xl md:text-5xl font-bold'>{movie?.title}</h1>
           <div className='my-4'>
+            
             <button
               className='border bg-gray-300 text-black-2 border-gray-300 py-2 px-5'
-              onClick={handlePlayClick}
+              onClick={handlePlayClick} 
             >
               Play
             </button>
@@ -77,6 +83,12 @@ const Main = () => {
           </div>
           {showTrailer && (
             <div className='mt-4'>
+               <button
+                className='border text-white border-gray-300 py-2 px-5'
+                onClick={handleCloseClick}
+              >
+                Close
+              </button>
               <iframe
                 width='560'
                 height='315'

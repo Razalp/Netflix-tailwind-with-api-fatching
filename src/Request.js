@@ -1,6 +1,6 @@
 import React from 'react'
 
-const key = process.env.REACT_APP_API_KEY;;
+const key = '961ef83b0bf98b51b6d7b6c6b885d384';
   
   const requests = {
     requestPopular: `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`,

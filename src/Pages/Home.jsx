@@ -2,8 +2,9 @@ import React from 'react'
 import Main from '../componets/Main'
 import Row from '../componets/Row'
 import Request from '../Request'
+import Footer from '../componets/Footer'
 const Home = () => {
-  const key = process.env.REACT_APP_API_KEY;;
+  const key = '961ef83b0bf98b51b6d7b6c6b885d384';
   
   const requests = {
     requestPopular: `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`,
@@ -20,6 +21,7 @@ const Home = () => {
         <Row rowID='3' title='Trending' fetchURL={requests.requestTrending} />
         <Row rowID='4' title='Top Rated' fetchURL={requests.requestTopRated} />
         <Row rowID='5' title='Horror' fetchURL={requests.requestHorror} />
+        <Footer/>
     </div>
   )
 }
